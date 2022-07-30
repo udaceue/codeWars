@@ -1,27 +1,37 @@
 console.log("Hi")
-// Clock shows h hours, m minutes and s seconds after midnight.
+// Given an array of integers.
 
-// Your task is to write a function which returns the time since midnight in milliseconds.
+// Return an array, where the first element is the count of positives numbers and the 
+// second element is sum of negative numbers. 0 is neither positive nor negative.
 
-// Example:
-// h = 0
-// m = 1
-// s = 1
+// If the input is an empty array or is null, return an empty array.
 
-// result = 61000
-// Input constraints:
+// Example
+// For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
 
-// 0 <= h <= 23
-// 0 <= m <= 59
-// 0 <= s <= 59
+function countPositivesSumNegatives(input) {
+  
+    let resultArr = []
+    if(input === null || input.length===0){
+      return resultArr  
+    }
+  else{
+    const lengthArr = input.length;
+    let positives = 0
+    let negatives = 0 
+    for (i = 0; i<lengthArr; i++)
+    {if(input[i]>0)
+    {
+      positives = positives + 1
+    }
+     else if(input[i]<0)
+       {
+      negatives = negatives + input[i]
+       }
 
-function past(h, m, s){
-    //#Happy Coding! ^_^
-      const miliseconds = 1000;
-      const seconds = s * miliseconds; 
-      const minutes = (m * 1000)*60; 
-      const hours = (h* 1000)*3600;
-      const result = seconds + minutes + hours;
-    return result;
-  }
-
+     }
+  resultArr.push(positives, negatives)
+  console.log(resultArr)
+  return resultArr
+    }
+}
