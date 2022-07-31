@@ -1,20 +1,35 @@
 console.log("Hi")
 
-// You were camping with your friends far away from home, but when it's time to go back, you realize that your fuel is running out and the nearest pump is 50 miles away!
-//  You know that on average, your car runs on about 25 miles per gallon. There are 2 gallons left.
+// Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. 
+// If the array does not contain any numbers then you should return 0.
 
-// Considering these factors, write a function that tells you if it is possible to get to the pump or not.
+// Examples
+// Input: [1, 5.2, 4, 0, -1]
+// Output: 9.2
 
-// Function should return true if it is possible and false if not.
+// Input: []
+// Output: 0
+
+// Input: [-2.398]
+// Output: -2.398///
+
+// Assumptions
+// You can assume that you are only given numbers.
+// You cannot assume the size of the array.
+// You can assume that you do get an array and if the array is empty, return 0.
 
 
-
-const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
-  // TODO
-  if(distanceToPump<=mpg*fuelLeft){
-    return true;
-  }
-  else{
-    return false;
-  }
+// Sum Numbers
+function sum (numbers) {
+  
+  let result = 0 
+      if (numbers === undefined){
+        return 0 
+      } else
+        {
+          numbers.map((el)=>{
+            result = result + el
+          })
+          return result
+        }
 };
