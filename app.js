@@ -1,4 +1,4 @@
-console.log("Hi")
+console.log("Hi");
 
 // Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. 
 // If the array does not contain any numbers then you should return 0.
@@ -19,17 +19,25 @@ console.log("Hi")
 // You can assume that you do get an array and if the array is empty, return 0.
 
 
-// Sum Numbers
-function sum (numbers) {
+// // Sum Numbers
+// function sum (numbers) {
   
-  let result = 0 
-      if (numbers === undefined){
-        return 0 
-      } else
-        {
-          numbers.map((el)=>{
-            result = result + el
-          })
-          return result
-        }
-};
+//   let result = 0 
+//       if (numbers === undefined){
+//         return 0 
+//       } else
+//         {
+//           numbers.map((el)=>{
+//             result = result + el
+//           })
+//           return result
+//         }
+// };
+
+const Numbers = [1,2,3,4]
+
+function sum(){
+        return Numbers.reduce((a,b) => a+b ,0)
+}
+
+console.log(sum(Numbers))
