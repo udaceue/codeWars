@@ -1,29 +1,20 @@
 console.log("Hi");
 
-// Create a function with two arguments that will return an array of the first (n) multiples of (x).
+// Timmy & Sarah think they are in love, but around where they live, they will only know once they pick a flower each. 
+// If one of the flowers has an even number of petals and the other has an odd number of petals it means they are in love.
 
-// Assume both the given number and the number of times to count will be positive numbers greater than 0.
-
-// Return the results as an array (or list in Python, Haskell or Elixir).
-
-// Examples:
-
-// countBy(1,10) === [1,2,3,4,5,6,7,8,9,10]
-// countBy(2,5) === [2,4,6,8,10]
+// Write a function that will take the number of petals of each flower and return true if they are in love and false if they aren't.
 
 
-function countBy(x, n) {
-  let z = [];
-  let multiples = 0
-  for (i = 0; i<n; i++)
-  {
-    multiples = multiples + x
-    z.push(multiples)
-  }
-    console.log(z)
-  
-  return z;
+function lovefunc(flower1, flower2){
+  // moment of truth
+        if (flower1%2===1 && flower2%2===0){
+          return true;
+        }
+        else if(flower1%2===0 && flower2%2===1){
+          return true;
+        }
+        else{
+          return false;
+        }
 }
-
-console.log(countBy(2,5));
-
